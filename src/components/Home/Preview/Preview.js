@@ -1,11 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
 
 import{Context} from '../../Home'
 import ListItem from './ListItem';
 
 function Preview() {
 
-    const {Photos, Videos} =Context;
+    const {Photos, Videos} =useContext(Context);
     const[photos,setPhotos]=Photos;
     const [videos,setVideos]=Videos;
   return (
