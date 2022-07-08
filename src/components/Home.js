@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import Choose from './Home/Choose';
 import Preview from './Home/Preview/Preview'
 import Header from './common/Header';
@@ -10,12 +10,15 @@ function Home() {
 
   const [photos,setPhotos] =useState(["asd","AD"]);
   
-  const [videos,setVideos] =useState(["ASD","ASD"]);
+  const [videos,setVideos] =useState([]);
 
   const context={
     Photos:[photos,setPhotos],
     Videos:[videos,setVideos]
   }
+  useEffect(()=>{
+    console.log("videos",videos);
+},[videos])
 
   console.log(photos);
   return (
