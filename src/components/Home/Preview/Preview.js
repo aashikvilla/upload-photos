@@ -18,16 +18,34 @@ function Preview() {
         });
     },[videos])
 
+    useEffect(()=>{
+        photos.map((v)=>{
+            console.log("photo in Preview",v);
+            console.log("photo in Preview",v.name);
+    
+        });
+        console.log("lenght",photos.length)
+    },[photos])
+
   return (
       <>
-       <div>Preview</div>
+      <center>
+          <br/>
+       <h3>Preview</h3>
        <div className='' style={{display:'flex'}}>
        {
-               photos.lenth>0 && 
-               photos.map(()=>(
-                   <ListItem />
-               )) 
-        }
+               photos.length>0 && 
+               <ul>
+                   {
+               photos.map((p)=>{
+                   return <li>{p.name}</li>
+
+
+               })
+            }
+               </ul>
+            }
+          
 
         {
             videos.lenght>0 &&
@@ -48,6 +66,7 @@ function Preview() {
          
 
        </div>
+       </center>
       </>
    
   )

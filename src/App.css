@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+    background-color: cornsilk;
+    margin: 10%;
+
 }
 
 .App-logo {
@@ -35,4 +38,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header{
+  padding: 25px;
+  background: #ffe3c1;
+}
+
+button{
+  padding: 10px 80px;
+  font-size: 12px;
+  background-color: #b9d2ff;
+  border: 1px solid #95bbff;
+  margin-bottom: 10px;
 }

@@ -47,10 +47,8 @@ console.log("newurl",newURL);
 
   return (
       <>
-      Camera
-      <button onClick={()=>props.setSetIsCamera(false)}>back</button>
+     
 
-      <h1>Video Camera</h1>
       
       <div>
         {/* <button
@@ -108,7 +106,8 @@ console.log("newurl",newURL);
           Get recording
         </button> */}
       </div>
-
+<center>
+    
       <video
         ref={recordWebcam.webcamRef}
         style={{
@@ -132,6 +131,7 @@ console.log("newurl",newURL);
         controls
       />
     
+</center>
       </>
     
   )

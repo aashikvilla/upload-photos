@@ -8,7 +8,7 @@ export const Context = React.createContext();
 
 function Home() {
 
-  const [photos,setPhotos] =useState(["asd","AD"]);
+  const [photos,setPhotos] =useState([]);
   
   const [videos,setVideos] =useState([]);
 
@@ -20,15 +20,23 @@ function Home() {
     console.log("videos",videos);
 },[videos])
 
+useEffect(()=>{
+  console.log("photos",photos);
+},[photos])
+
+
+
   console.log(photos);
   return (
     <Context.Provider value={context}>
       <>
      
         <Header />
-        Please select one of the following options to upload the files.<br/>
+        <br/><br/>
+        Please select one of the following options to upload the files.<br/><br/><br/>
         <Choose/>
-        <Preview />        
+        <Preview />     
+        
       </>
     </Context.Provider>
    
